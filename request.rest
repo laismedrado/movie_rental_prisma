@@ -1,0 +1,49 @@
+
+
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+   "name": "laygguy gaga", 
+   "email": "ladyggghkjga@oromi.com" 
+}
+
+   
+###
+POST http://localhost:3003/movies
+Content-Type: application/json
+{
+   "title": "brunfdgd", 
+   "duration": 60,
+	"release_dater": "2000-01-01"
+}
+
+
+  
+  
+
+# ###
+
+# POST http://localhost:3003/user/login
+# Content-Type: application/json
+
+# {
+   
+#    "email": "lalaie@laluxa.com" ,
+#    "password": "helloworld"
+   
+# }
+
+
+# ###
+
+# PUT http://localhost:3003/user/e9a30585-f742-4801-94a4-ed66679ebfcb
+# Content-Type: application/json
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU5YTMwNTg1LWY3NDItNDgwMS05NGE0LWVkNjY2NzllYmZjYiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTgyNDk0MiwiZXhwIjoxNjU5ODI2NzQyfQ.k1XW7a5L6xEqQcfMkWV-zPWiA07Y-VgxwoeVdVQfxNc
+
+# {
+#    "name": "Lais Medrado",
+#    "nickname": "Laluxa"  
+# }
+
+
