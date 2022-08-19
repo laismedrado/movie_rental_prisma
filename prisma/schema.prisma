@@ -10,16 +10,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id          String @id @default(cuid())
+model User_client {
+  id          String @id @default(uuid())
   email       String @unique
   name        String
-  password    String
+ 
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   movie_rent MovieRent[]
 
-  @@map("users")
+  @@map("users_client")
 }
 
 model Movie  {
@@ -34,7 +34,7 @@ movie_rent MovieRent[]
 }
 
 model MovieRent {
-  user User @relation( fields:[userId], references: [id])
+  user User_client @relation( fields:[userId], references: [id])
   userId String
   movie Movie @relation( fields:[movieId], references: [id])
   movieId String 
