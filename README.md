@@ -1,13 +1,10 @@
 
 <h1 align = "center"> ✨ MovieRent  ✨  </h1 >   
   
-
  <h3 align = "center">   Sistema de gerenciamento de aluguel de filmes. </h3>
 
-
-</br>
 <div align = "center">
-<img src="https://user-images.githubusercontent.com/31759644/187200511-9a874296-7181-48b2-831f-571200d3b96e.png"  width="450" height="100" /> 
+<img src="https://user-images.githubusercontent.com/31759644/187200511-9a874296-7181-48b2-831f-571200d3b96e.png"  width="250" height="50" /> 
 </div>
 
 
