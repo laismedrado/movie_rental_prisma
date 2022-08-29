@@ -1,7 +1,8 @@
 import "express-async-errors";
 import express, { NextFunction, Request, Response } from "express";
-import { AppError } from "./error/customError";
-import routes from "./routes";
+// import { AppError } from "./error/customError";
+import {routes} from "./routes";
+import { AppError } from "./erros/AppErrors";
 
 const app = express();
 app.use(express.json());

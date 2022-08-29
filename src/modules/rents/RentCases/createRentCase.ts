@@ -1,10 +1,13 @@
 
-import { prisma } from "../data/prismaClient";
-import { AppError } from "../error/customError";
-import message from "../error/Messages";
-import { CreateMovieRentDTO } from "../model/createMovie";
 
-export class MovieRentBusiness {
+import { AppError } from "../../../erros/AppErrors";
+import { prisma } from "../../../prisma/client";
+import { CreateMovieRentDTO } from "../DTO/createRentsDto";
+
+
+
+
+export class CreateRentCase {
   async execute({ movieId, userId }: CreateMovieRentDTO): Promise<void> {
     //verificar se o filmes existe
 
@@ -17,7 +20,7 @@ export class MovieRentBusiness {
     });
 
     if (!movieExists) {
-      throw new AppError(message.movieDontExist);
+      throw new AppError("Movie not found");
     }
 
     //veirircar s eo filme não está alugado
@@ -28,32 +31,33 @@ export class MovieRentBusiness {
       },
     });
     if (movieAlreadyRented) {
-      throw new AppError(message.movieRent);
+      throw new AppError("Movie already rented");
     }
 
     // verificar se o usuário existe
 
-    const userExists = await prisma.user.findUnique({
+    const userExists = await prisma.user_client.findUnique({
       where: {
         id: userId,
       },
     });
 
     if (!userExists) {
-      throw new AppError(message.userDontExist);
+      throw new AppError("User not found");
     }
 
     // criar a locação
-    await prisma.movieRent.create({
+    const createRent =await prisma.movieRent.create({
       data: {
         movieId,
         userId
-      }
-    })
-    
-    } catch (error:any) {
-      throw new AppError(error.message, );
     }
-  }
+})
+
+} catch (error:any) {
+    throw new AppError(error.message, );
+}
+
+}
 }
       

@@ -4,22 +4,30 @@ POST http://localhost:3003/users
 Content-Type: application/json
 
 {
-   "name": "laygguy gaga", 
-   "email": "ladyggghkjga@oromi.com" 
+   "name": "lailuxam", 
+   "email": "laismedrado@lailuxam" 
 }
 
-   
+
 ###
 POST http://localhost:3003/movies
 Content-Type: application/json
 {
-   "title": "brunfdgd", 
-   "duration": 60,
-	"release_dater": "2000-01-01"
+   "title":"sher Hulk", 
+   "duration":500,
+	"release_dater":"2022-08-19T04:45:40.755Z"
 }
 
-
+###
   
+POST http://localhost:3003/rents
+Content-Type: application/json
+
+{
+   "userId": "lailuxam", 
+   "movieId": "laismedrado@lailuxam" 
+}
+
   
 
 # ###
